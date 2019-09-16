@@ -21,8 +21,8 @@ module.exports = {
         name: `How Old Is Charlie? 🐶`,
         short_name: `Charlie 🐶`,
         start_url: `/`,
-        background_color: `##9A382A`,
-        theme_color: `##9A382A`,
+        background_color: `#9A382A`,
+        theme_color: `#9A382A`,
         display: `minimal-ui`,
         icon: `src/images/paw-icon.png`, // This path is relative to the root of the site.
       },
