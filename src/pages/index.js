@@ -11,8 +11,6 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <h1>{`Charlie is ${formatDistanceStrict(CHARLIE_BIRTHDAY, new Date())} old`}</h1>
-    <p></p>
-    <h1></h1>
   </Layout>
 )
 
