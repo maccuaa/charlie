@@ -19,7 +19,8 @@ const Layout = ({ children }) => {
       color: '#FFF',
       height: "100%",
       display: 'flex',
-      alignItems: 'center'
+      alignItems: 'center',
+      textAlign: 'center'
     }}>
       <div
         style={{
