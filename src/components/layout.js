@@ -8,20 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import 'typeface-quicksand';
+import "typeface-quicksand"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-
   return (
-    <div style={{
-      backgroundColor: '#9A382A',
-      color: '#FFF',
-      height: "100%",
-      display: 'flex',
-      alignItems: 'center',
-      textAlign: 'center'
-    }}>
+    <div
+      style={{
+        backgroundColor: "#9A382A",
+        color: "#FFF",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        textAlign: "center",
+      }}
+    >
       <div
         style={{
           margin: `0 auto`,
@@ -29,7 +30,13 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main
+          style={{
+            margin: 24,
+          }}
+        >
+          {children}
+        </main>
       </div>
     </div>
   )

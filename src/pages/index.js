@@ -11,7 +11,9 @@ import {
   subMonths,
 } from "date-fns"
 
-const CHARLIE_BIRTHDAY = new Date("2019 May 19")
+import "typeface-quicksand"
+
+const CHARLIE_BIRTHDAY = new Date("2019", 4, 19);
 
 function datediff(from, to) {
   const result = []
@@ -39,12 +41,12 @@ function datediff(from, to) {
 const IndexPage = () => {
   const TODAY = new Date()
 
-  const diff = datediff(CHARLIE_BIRTHDAY, TODAY)
+  const diff = datediff(CHARLIE_BIRTHDAY, TODAY);
 
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>{`Charlie is ${diff}`}</h1>
+      <h1>{`Charlie is ${diff} old`}</h1>
     </Layout>
   )
 }
