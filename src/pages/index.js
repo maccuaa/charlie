@@ -13,7 +13,7 @@ import {
 
 import "typeface-quicksand"
 
-const CHARLIE_BIRTHDAY = new Date("2019", 4, 19);
+const CHARLIE_BIRTHDAY = new Date("2019", 4, 19)
 
 function datediff(from, to) {
   const result = []
@@ -41,7 +41,7 @@ function datediff(from, to) {
 const IndexPage = () => {
   const TODAY = new Date()
 
-  const diff = datediff(CHARLIE_BIRTHDAY, TODAY);
+  const diff = datediff(CHARLIE_BIRTHDAY, TODAY)
 
   return (
     <Layout>
