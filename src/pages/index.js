@@ -1,7 +1,9 @@
 import React from "react"
+
 import "normalize.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import pawIcon from '../images/paw-icon.png';
 
 import {
   differenceInYears,
@@ -47,6 +49,11 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <h1>{`Charlie is ${diff} old`}</h1>
+      <img src={pawIcon} alt="Logo" style={{
+        maxWidth: "50%",
+        maxHeight: 100,
+        marginTop: 24
+      }} />
     </Layout>
   )
 }
