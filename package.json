@@ -1,46 +1,29 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "charlie-next",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+  },
   "dependencies": {
-    "date-fns": "^2.7.0",
-    "gatsby": "^2.17.17",
-    "gatsby-image": "^2.2.33",
-    "gatsby-plugin-manifest": "^2.2.29",
-    "gatsby-plugin-offline": "^3.0.22",
-    "gatsby-plugin-react-helmet": "^3.1.15",
-    "gatsby-plugin-sharp": "^2.3.2",
-    "gatsby-source-filesystem": "^2.1.38",
-    "gatsby-transformer-sharp": "^2.3.5",
-    "normalize.css": "^8.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "typeface-quicksand": "0.0.71"
+    "@fortawesome/fontawesome-svg-core": "1.2.26",
+    "@fortawesome/free-brands-svg-icons": "5.12.0",
+    "@fortawesome/react-fontawesome": "0.1.8",
+    "@zeit/next-css": "1.0.1",
+    "date-fns": "2.8.1",
+    "next": "9.1.4",
+    "normalize.css": "8.0.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "@types/node": "12.12.14",
+    "@types/react": "16.9.15",
+    "prettier": "1.19.1",
+    "typescript": "3.7.3"
   }
 }
