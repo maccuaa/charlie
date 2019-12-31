@@ -7,8 +7,8 @@ exports.handler = async event => {
 
   console.log("Fetching posts...");
 
-  // const posts = await instagramPosts("the.charlie.dood");
-  const posts = [
+  const posts = await instagramPosts("the.charlie.dood");
+  const posts2 = [
     {
       __typename: "GraphImage",
       id: "2195151476763366864",
@@ -122,6 +122,6 @@ exports.handler = async event => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(posts)
+    body: JSON.stringify(posts2)
   };
 };
