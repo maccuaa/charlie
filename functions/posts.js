@@ -1,4 +1,4 @@
-// const instagramPosts = require("instagram-posts");
+const instagramPosts = require("instagram-posts");
 
 exports.handler = async event => {
   if (event.httpMethod !== "GET") {
