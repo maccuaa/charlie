@@ -2,9 +2,11 @@ import * as React from "react";
 
 import "normalize.css";
 import { NextSeo } from "next-seo";
-import Age from "../components/Age";
 import Head from "next/head";
+
+import Age from "../components/Age";
 import Layout from "../components/Layout";
+import Posts from "../components/Posts";
 
 const siteMetadata = {
   title: "Charlie",
@@ -47,6 +49,7 @@ const Home = () => (
 
     <Layout>
       <Age />
+      <Posts />
     </Layout>
   </>
 );
