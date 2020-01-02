@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import {
   differenceInYears,
   differenceInMonths,
@@ -43,20 +41,7 @@ const Age = () => {
 
   const diff = datediff(CHARLIE_BIRTHDAY, TODAY);
 
-  return (
-    <>
-      <style jsx>{`
-        a {
-          color: inherit;
-        }
-      `}</style>
-
-      <h1>{`Charlie is ${diff} old`}</h1>
-      <a href="https://www.instagram.com/the.charlie.dood" target="_blank">
-        <FontAwesomeIcon icon={faInstagram} size="3x" />
-      </a>
-    </>
-  );
+  return <h2>{`Charlie is ${diff} old`}</h2>;
 };
 
 export default Age;

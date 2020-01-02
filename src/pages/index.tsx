@@ -7,6 +7,7 @@ import Head from "next/head";
 import Age from "../components/Age";
 import Layout from "../components/Layout";
 import PostComponent from "../components/Post";
+import { instagramPosts, Post } from "../lib/instagram-posts";
 
 const siteMetadata = {
   title: "Charlie",
@@ -16,7 +17,11 @@ const siteMetadata = {
   icon: "/paw-icon.png"
 };
 
-const Home = () => (
+interface Props {
+  post: Post;
+}
+
+const Home = ({ post }: Props) => (
   <>
     <Head>
       <link rel="icon" href={siteMetadata.icon} />
@@ -44,9 +49,19 @@ const Home = () => (
 
     <Layout>
       <Age />
+      <PostComponent post={post} />
     </Layout>
-    <PostComponent />
   </>
 );
+
+export async function unstable_getStaticProps() {
+  const posts = await instagramPosts("the.charlie.dood", { count: 1 });
+
+  return {
+    props: {
+      post: posts[0]
+    }
+  };
+}
 
 export default Home;

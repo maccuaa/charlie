@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node scripts/getLatestPost",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,13 +10,10 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.26",
-    "@fortawesome/free-brands-svg-icons": "5.12.0",
-    "@fortawesome/react-fontawesome": "0.1.8",
     "@zeit/next-css": "1.0.1",
     "axios": "0.19.0",
     "date-fns": "2.8.1",
-    "next": "^9.1.6",
+    "next": "9.1.6",
     "next-offline": "4.0.6",
     "next-seo": "3.2.0",
     "normalize.css": "8.0.1",
@@ -26,11 +22,9 @@
     "react-instagram-embed": "1.5.0"
   },
   "devDependencies": {
-    "@types/node": "^13.1.2",
-    "@types/react": "^16.9.17",
-    "cross-env": "6.0.3",
+    "@types/node": "13.1.2",
+    "@types/react": "16.9.17",
     "prettier": "1.19.1",
-    "ts-node": "8.5.4",
-    "typescript": "^3.7.4"
+    "typescript": "3.7.4"
   }
 }
