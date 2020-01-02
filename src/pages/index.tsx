@@ -6,7 +6,7 @@ import Head from "next/head";
 
 import Age from "../components/Age";
 import Layout from "../components/Layout";
-import Posts from "../components/Posts";
+import PostComponent from "../components/Post";
 
 const siteMetadata = {
   title: "Charlie",
@@ -18,11 +18,6 @@ const siteMetadata = {
 
 const Home = () => (
   <>
-    <style jsx>{`
-      a {
-        color: inherit;
-      }
-    `}</style>
     <Head>
       <link rel="icon" href={siteMetadata.icon} />
       <link rel="manifest" href="/manifest.json" />
@@ -49,8 +44,8 @@ const Home = () => (
 
     <Layout>
       <Age />
-      <Posts />
     </Layout>
+    <PostComponent />
   </>
 );
 

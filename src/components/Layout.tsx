@@ -7,16 +7,7 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div
-      style={{
-        backgroundColor: "#9A382A",
-        color: "#FFF",
-        height: "100%",
-        display: "flex",
-        alignItems: "center",
-        textAlign: "center"
-      }}
-    >
+    <div id="root">
       <style global jsx>{`
         @import url("https://fonts.googleapis.com/css?family=Quicksand:300,&display=swap");
 
@@ -25,6 +16,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           font-family: "Quicksand", sans-serif;
           font-weight: 300;
           margin: 0;
+          background-color: #9a382a;
         }
 
         html,
@@ -32,21 +24,30 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         #__next {
           height: 100%;
         }
+
+        #root {
+          color: #fff;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+
+        #wrapper {
+          margin: 0 auto;
+          max-width: 960px;
+        }
+
+        main {
+          margin: 24px;
+        }
+
+        a {
+          color: inherit;
+        }
       `}</style>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          paddingTop: 0
-        }}
-      >
-        <main
-          style={{
-            margin: 24
-          }}
-        >
-          {children}
-        </main>
+      <div id="wrapper">
+        <main>{children}</main>
       </div>
     </div>
   );
