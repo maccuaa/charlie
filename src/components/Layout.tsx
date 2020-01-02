@@ -6,33 +6,41 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <style global jsx>{`
         @import url("https://fonts.googleapis.com/css?family=Quicksand:300,&display=swap");
 
-        html,
         body {
           font-family: "Quicksand", sans-serif;
           font-weight: 300;
-          margin: 0;
           background-color: #9a382a;
-          height: 100%;
+          color: #fff;
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+          width: 100%;
         }
 
         #__next {
-          height: 100%;
+          // height: 100%;
         }
 
         #root {
-          color: #fff;
+          text-align: center;
           display: flex;
-          align-items: center;
-          height: 100%;
+          flex-direction: column;
+          height: 100vh;
+          justify-content: space-between;
+          position: relative;
+          justify-content: center;
         }
 
-        #wrapper {
-          margin: 0 auto;
-          max-width: 960px;
-        }
+        @media screen and (min-width: 768px) {
+          #wrapper {
+            margin: 0 auto;
+            max-width: 960px;
+            // display: flex;
+          }
 
-        main {
-          margin: 24px;
+          main {
+            margin: 24px;
+          }
         }
 
         a {
