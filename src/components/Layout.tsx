@@ -17,34 +17,38 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           width: 100%;
         }
 
-        #__next {
-          // height: 100%;
-        }
-
         #root {
           text-align: center;
           display: flex;
           flex-direction: column;
-          height: 100vh;
           justify-content: space-between;
           position: relative;
           justify-content: center;
+        }
+
+        main {
+          margin: 24px;
+        }
+
+        a {
+          color: inherit;
         }
 
         @media screen and (min-width: 768px) {
           #wrapper {
             margin: 0 auto;
             max-width: 960px;
-            // display: flex;
           }
 
           main {
-            margin: 24px;
+            margin: 0;
           }
         }
 
-        a {
-          color: inherit;
+        @media screen and (min-height: 634px) {
+          #root {
+            height: 100vh;
+          }
         }
       `}</style>
       <div id="wrapper">
