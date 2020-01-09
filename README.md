@@ -4,6 +4,7 @@
 
 A simple PWA I built to tell me exactly how old my dog Charlie is.
 
-- Next.js
-- TypeScript
-- Netlify
+- Powered by Next.js
+- Written in TypeScript
+- Hosted on Netlify
+- Automatically deployed by Zapier
