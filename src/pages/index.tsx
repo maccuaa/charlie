@@ -14,7 +14,7 @@ const siteMetadata = {
   description: "How old is Charlie? 🐶",
   author: "Andrew MacCuaig",
   canonical: "https://howoldischarlie.ca",
-  icon: "/paw-icon.png"
+  icon: "/paw-icon.png",
 };
 
 interface Props {
@@ -41,9 +41,9 @@ const Home = ({ post }: Props) => (
         url: siteMetadata.canonical,
         images: [
           {
-            url: siteMetadata.icon
-          }
-        ]
+            url: siteMetadata.icon,
+          },
+        ],
       }}
     />
 
@@ -54,13 +54,13 @@ const Home = ({ post }: Props) => (
   </>
 );
 
-export async function unstable_getStaticProps() {
+export async function getStaticProps() {
   const posts = await instagramPosts("the.charlie.dood", { count: 1 });
 
   return {
     props: {
-      post: posts[0]
-    }
+      post: posts[0],
+    },
   };
 }
 

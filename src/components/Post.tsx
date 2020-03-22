@@ -11,7 +11,7 @@ const Posts = ({ post }: Props) => (
     style={{
       display: "flex",
       justifyContent: "center",
-      marginTop: 16
+      marginTop: 16,
     }}
   >
     <InstagramEmbed url={post.url} hideCaption maxWidth={320} />

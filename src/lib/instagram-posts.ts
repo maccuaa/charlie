@@ -74,7 +74,7 @@ const transformPosts = (posts: Array<{ node: Post }> = []) =>
     time: node.taken_at_timestamp,
     type: node.is_video ? "video" : "image",
     url: `https://www.instagram.com/p/${node.shortcode}`,
-    username: node.owner.username
+    username: node.owner.username,
   }));
 
 const fetchPosts = async (
@@ -91,9 +91,9 @@ const fetchPosts = async (
       variables: JSON.stringify({
         after: cursor,
         first: postsLeft,
-        id
-      })
-    }
+        id,
+      }),
+    },
   });
 
   const {
@@ -101,10 +101,10 @@ const fetchPosts = async (
       user: {
         edge_owner_to_timeline_media: {
           edges: currentPosts,
-          page_info: { end_cursor, has_next_page }
-        }
-      }
-    }
+          page_info: { end_cursor, has_next_page },
+        },
+      },
+    },
   } = response.data;
 
   let newPosts = transformPosts(currentPosts);
@@ -127,9 +127,9 @@ export const instagramPosts = async (
   const {
     edge_owner_to_timeline_media: {
       edges: currentPosts,
-      page_info: { end_cursor, has_next_page }
+      page_info: { end_cursor, has_next_page },
     },
-    id
+    id,
   } = await instagramUser(username);
 
   let newPosts = transformPosts(currentPosts);
@@ -156,7 +156,7 @@ const instagramUser = async (username: string) => {
   const response = await axios.get(url, { params: { __a: 1 } });
 
   const {
-    graphql: { user }
+    graphql: { user },
   } = response.data;
 
   return {
@@ -168,7 +168,7 @@ const instagramUser = async (username: string) => {
     posts: user.edge_owner_to_timeline_media.count,
     url,
     username,
-    website: user.external_url
+    website: user.external_url,
   };
 };
 

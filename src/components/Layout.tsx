@@ -25,6 +25,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
         justify-content: center;
       }
 
+      #wrapper {
+        overflow: auto;
+      }
+
       main {
         margin: 24px;
       }
@@ -37,6 +41,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
         #wrapper {
           margin: 0 auto;
           max-width: 960px;
+          overflow: hidden;
         }
 
         main {
