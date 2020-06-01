@@ -96,6 +96,8 @@ const fetchPosts = async (
     },
   });
 
+  console.log("Got posts");
+
   const {
     data: {
       user: {
@@ -124,6 +126,7 @@ export const instagramPosts = async (
   username: string,
   options: Options
 ): Promise<Post[]> => {
+
   const {
     edge_owner_to_timeline_media: {
       edges: currentPosts,
@@ -153,11 +156,16 @@ const instagramUser = async (username: string) => {
   }
 
   const url = `https://instagram.com/${username}`;
+
   const response = await axios.get(url, { params: { __a: 1 } });
+
+  console.log("Got Instagram user", username);
 
   const {
     graphql: { user },
   } = response.data;
+
+  console.log("Returning profile info for", username)
 
   return {
     ...user,
