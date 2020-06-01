@@ -161,6 +161,9 @@ const instagramUser = async (username: string) => {
 
   console.log("Got Instagram user", username);
 
+  console.log("Status", response.status);
+  console.log(JSON.stringify(response.data, null, 2))
+
   const {
     graphql: { user },
   } = response.data;
