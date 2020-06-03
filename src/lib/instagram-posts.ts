@@ -1,13 +1,15 @@
 import axios from "axios";
 
 export const instagramUser = async (username: string) => {
-  const url = `https://instagram.com/${username}`;
+  // const url = `https://instagram.com/${username}`;
+  // const url = "https://www.instagram.com/graphql/query/?query_hash=44efc15d3c13342d02df0b5a9fa3d33f&variables=%7B%22id%22%3A%2220906864135%22%2C%22first%22%3A12%2C%22after%22%3A%22QVFDZTVJRmFpN29HX1FEaXVqVHpEVFhjNXFTQ0I4bjlmUmpnek16MkpORlY3UlRLYmVwYlJuNkluOUpMdnRyWG02T3VPZHJ1MENPNVdnaE1Ha28xN1RCVQ%3D%3D%22%7D"
+  const url = `https://www.instagram.com/graphql/query/?query_hash=44efc15d3c13342d02df0b5a9fa3d33f&variables={"id":"20906864135","first":1}`
 
   const response = await axios.get(url, { params: { __a: 1 } });
 
   console.log("✅ Got", username);
 
-  const user = response.data?.graphql?.user;
+  const user = response.data?.data?.user;
 
   if (!user) {
     console.error(response.status);
