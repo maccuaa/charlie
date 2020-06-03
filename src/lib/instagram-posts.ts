@@ -10,7 +10,8 @@ export const instagramUser = async (username: string) => {
   const user = response.data?.graphql?.user;
 
   if (!user) {
-    console.log(response.data);
+    console.error(response.status);
+    console.error(response.headers);
     throw new Error("❌ Graphql User object not returned in API call");
   }
 
