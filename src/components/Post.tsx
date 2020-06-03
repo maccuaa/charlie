@@ -1,12 +1,11 @@
 import * as React from "react";
 import InstagramEmbed from "react-instagram-embed";
-import { Post } from "../lib/instagram-posts";
 
 interface Props {
-  post: Post;
+  url: string;
 }
 
-const Posts = ({ post }: Props) => (
+const Posts = ({ url }: Props) => (
   <div
     style={{
       display: "flex",
@@ -14,7 +13,7 @@ const Posts = ({ post }: Props) => (
       marginTop: 16,
     }}
   >
-    <InstagramEmbed url={post.url} hideCaption maxWidth={320} />
+    <InstagramEmbed url={url} hideCaption maxWidth={320} />
   </div>
 );
 

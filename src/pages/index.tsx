@@ -7,7 +7,7 @@ import Head from "next/head";
 import Age from "../components/Age";
 import Layout from "../components/Layout";
 import PostComponent from "../components/Post";
-import { instagramPosts, Post } from "../lib/instagram-posts";
+import { getLatestPostURL } from "../lib/instagram-posts";
 
 const siteMetadata = {
   title: "Charlie",
@@ -18,10 +18,10 @@ const siteMetadata = {
 };
 
 interface Props {
-  post: Post;
+  url: string;
 }
 
-const Home = ({ post }: Props) => (
+const Home = ({ url }: Props) => (
   <>
     <Head>
       <link rel="icon" href={siteMetadata.icon} />
@@ -49,17 +49,17 @@ const Home = ({ post }: Props) => (
 
     <Layout>
       <Age />
-      <PostComponent post={post} />
+      <PostComponent url={url} />
     </Layout>
   </>
 );
 
 export async function getStaticProps() {
-  const posts = await instagramPosts("the.charlie.dood", { count: 1 });
+  const url = await getLatestPostURL("the.charlie.dood");
 
   return {
     props: {
-      post: posts[0],
+      url,
     },
   };
 }

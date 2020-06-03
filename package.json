@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ava"
   },
   "dependencies": {
     "@zeit/next-css": "1.0.1",
@@ -22,9 +23,20 @@
     "react-instagram-embed": "1.5.0"
   },
   "devDependencies": {
-    "@types/node": "14.0.6",
+    "@ava/typescript": "1.1.1",
+    "@types/node": "14.0.9",
     "@types/react": "16.9.35",
+    "ava": "3.8.2",
     "prettier": "2.0.5",
+    "ts-node": "8.10.2",
     "typescript": "3.9.3"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }

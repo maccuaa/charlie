@@ -9,3 +9,19 @@ A simple PWA I built to tell me exactly how old my dog Charlie is.
 - Written in TypeScript
 - Hosted on Netlify
 - Automatically deployed by Zapier
+
+### Development
+
+```shell
+# Start the application in development mode
+npm run dev
+
+# Create an optimized production build
+npm run build
+
+# Start the application in production mode. Build for production first.
+npm start
+
+# Prerendering all pages to HTML. Build for production first.
+npm run export
+```
