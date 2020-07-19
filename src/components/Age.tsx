@@ -3,7 +3,6 @@ import * as React from "react";
 import {
   differenceInYears,
   differenceInMonths,
-  differenceInDays,
   subYears,
   subMonths,
 } from "date-fns";
