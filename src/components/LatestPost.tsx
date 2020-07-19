@@ -1,20 +1,36 @@
 import * as React from "react";
-import InstagramEmbed from "react-instagram-embed";
 
 interface Props {
-  url: string;
+  caption: string;
+  imageUrl: string;
+  shortcode: string;
 }
 
-const Posts = ({ url }: Props) => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      marginTop: 16,
-    }}
-  >
-    <InstagramEmbed url={url} hideCaption maxWidth={320} />
-  </div>
-);
+const LatestPost = ({ caption, imageUrl, shortcode }: Props) => {
+  console.log(caption);
+  return (
+    <div>
+      <a href={`https://www.instagram.com/p/${shortcode}`}>
+        <img src={imageUrl} />
+      </a>
+      {/* <pre>{caption}</pre> */}
 
-export default Posts;
+      <style jsx>{`
+        img {
+          padding: 2px;
+          background-color: #fff;
+          max-width: 100%;
+          border-radius: 8px;
+          max-height: 80vh;
+        }
+        pre {
+          text-align: left;
+          font-family: inherit;
+          white-space: pre-line;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default LatestPost;

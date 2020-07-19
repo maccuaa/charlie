@@ -27,13 +27,7 @@ const calculateHumanAge = (from: Date, to: Date) => {
     to = subMonths(to, months);
   }
 
-  const days = differenceInDays(to, from);
-
-  if (days > 0) {
-    result.push(`${days} day${days > 1 ? "s" : ""}`);
-  }
-
-  return result.join(" "); //1 years 4 months 13 days
+  return result.join(" "); //1 years 4 months
 };
 
 const calculateDogAge = (from: Date, to: Date) => {

@@ -45,17 +45,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
         #wrapper {
           margin: 0 auto;
           max-width: 960px;
-          overflow: hidden;
         }
 
         main {
           margin: 0;
-        }
-      }
-
-      @media screen and (min-height: 634px) {
-        #root {
-          height: 100vh;
         }
       }
     `}</style>

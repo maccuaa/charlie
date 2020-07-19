@@ -8,24 +8,34 @@ import LatestPost from "../components/LatestPost";
 import { getLatestPostURL } from "../lib/instagram-posts";
 
 interface Props {
-  url: string;
+  caption: string;
+  display_url: string;
+  shortcode: string;
 }
 
-const Home = ({ url }: Props) => (
+const Home = ({ caption, display_url, shortcode }: Props) => (
   <>
     <Layout>
       <Age />
-      <LatestPost url={url} />
+      <LatestPost
+        caption={caption}
+        imageUrl={display_url}
+        shortcode={shortcode}
+      />
     </Layout>
   </>
 );
 
 export async function getStaticProps() {
-  const url = await getLatestPostURL("the.charlie.dood");
+  const { caption, display_url, shortcode } = await getLatestPostURL(
+    "the.charlie.dood"
+  );
 
   return {
     props: {
-      url,
+      caption,
+      display_url,
+      shortcode,
     },
   };
 }

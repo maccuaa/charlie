@@ -3,7 +3,7 @@ import axios from "axios";
 export const instagramUser = async (username: string) => {
   // const url = `https://instagram.com/${username}`;
   // const url = "https://www.instagram.com/graphql/query/?query_hash=44efc15d3c13342d02df0b5a9fa3d33f&variables=%7B%22id%22%3A%2220906864135%22%2C%22first%22%3A12%2C%22after%22%3A%22QVFDZTVJRmFpN29HX1FEaXVqVHpEVFhjNXFTQ0I4bjlmUmpnek16MkpORlY3UlRLYmVwYlJuNkluOUpMdnRyWG02T3VPZHJ1MENPNVdnaE1Ha28xN1RCVQ%3D%3D%22%7D"
-  const url = `https://www.instagram.com/graphql/query/?query_hash=44efc15d3c13342d02df0b5a9fa3d33f&variables={"id":"20906864135","first":1}`
+  const url = `https://www.instagram.com/graphql/query/?query_hash=44efc15d3c13342d02df0b5a9fa3d33f&variables={"id":"20906864135","first":1}`;
 
   const response = await axios.get(url, { params: { __a: 1 } });
 
@@ -23,6 +23,8 @@ export const instagramUser = async (username: string) => {
 export const getLatestPostURL = async (username: string) => {
   const user = await instagramUser(username);
 
+  // console.log(JSON.stringify(user, null, 2));
+
   const { edge_owner_to_timeline_media } = user;
   const { count, edges } = edge_owner_to_timeline_media;
 
@@ -30,7 +32,14 @@ export const getLatestPostURL = async (username: string) => {
 
   const latestPost = edges.shift();
 
-  const { taken_at_timestamp, shortcode } = latestPost.node;
+  const {
+    taken_at_timestamp,
+    shortcode,
+    display_url,
+    edge_media_to_caption,
+  } = latestPost.node;
+
+  const caption = edge_media_to_caption.edges.shift().node.text;
 
   console.log(
     "⏰Latest post uploaded at",
@@ -39,5 +48,7 @@ export const getLatestPostURL = async (username: string) => {
     })
   );
 
-  return `https://www.instagram.com/p/${shortcode}`;
+  // console.log(caption);
+
+  return { display_url, shortcode, caption };
 };
