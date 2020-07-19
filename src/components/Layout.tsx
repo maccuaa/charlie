@@ -1,4 +1,8 @@
 import React from "react";
+import Head from "next/head";
+import { NextSeo } from "next-seo";
+
+import siteMetadata from "../lib/metadata.json";
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div id="root">
@@ -26,7 +30,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
       }
 
       #wrapper {
-        overflow: auto;
+        ovrflow: auto;
       }
 
       main {
@@ -55,6 +59,31 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
         }
       }
     `}</style>
+
+    <Head>
+      <link rel="icon" href={siteMetadata.icon} />
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#9A382A" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
+
+    <NextSeo
+      title={siteMetadata.title}
+      description={siteMetadata.description}
+      canonical={siteMetadata.canonical}
+      openGraph={{
+        title: siteMetadata.title,
+        description: siteMetadata.description,
+        type: "website",
+        url: siteMetadata.canonical,
+        images: [
+          {
+            url: siteMetadata.icon,
+          },
+        ],
+      }}
+    />
+
     <div id="wrapper">
       <main>{children}</main>
     </div>

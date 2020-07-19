@@ -1,0 +1,33 @@
+{
+  //
+  // Eslint Settings
+  //
+  "eslint.run": "onSave",
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "javascriptreact", "json", "markdown", "typescript", "typescriptreact"],
+  "eslint.workingDirectories": [
+    {
+      "directory": "./",
+      "changeProcessCWD": true
+    }
+  ],
+  //
+  // Whitespace
+  //
+  "files.trimTrailingWhitespace": true,
+  //
+  // Editor Settings
+  //
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderIndentGuides": true,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.wordBasedSuggestions": false,
+  "editor.fontLigatures": true,
+  "editor.rulers": [120]
+}

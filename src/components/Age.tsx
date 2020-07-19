@@ -10,7 +10,7 @@ import {
 
 const CHARLIE_BIRTHDAY = new Date(2019, 4, 19);
 
-const datediff = (from: Date, to: Date) => {
+const calculateHumanAge = (from: Date, to: Date) => {
   const result = [];
 
   const years = differenceInYears(to, from);
@@ -36,6 +36,14 @@ const datediff = (from: Date, to: Date) => {
   return result.join(" "); //1 years 4 months 13 days
 };
 
+const calculateDogAge = (from: Date, to: Date) => {
+  const years = differenceInYears(to, from);
+
+  const age = 16 * Math.log(years) + 31;
+
+  return age;
+};
+
 const isCharliesBirthday = () => {
   const today = new Date();
 
@@ -48,7 +56,8 @@ const isCharliesBirthday = () => {
 const Age = () => {
   const TODAY = new Date();
 
-  const diff = datediff(CHARLIE_BIRTHDAY, TODAY);
+  const humanAge = calculateHumanAge(CHARLIE_BIRTHDAY, TODAY);
+  const dogAge = calculateDogAge(CHARLIE_BIRTHDAY, TODAY);
 
   const charliesBirthday = isCharliesBirthday();
 
@@ -60,7 +69,8 @@ const Age = () => {
           <h1>🎉 🥳 🎁</h1>
         </>
       )}
-      <h2>{`Charlie is ${diff} old`}</h2>
+      <h2>{`Charlie is ${humanAge} old`}</h2>
+      <h2>{`That's ${dogAge} in dog years!`}</h2>
     </>
   );
 };
