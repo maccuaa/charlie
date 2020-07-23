@@ -27,9 +27,7 @@ const Home = ({ caption, display_url, shortcode }: Props) => (
 );
 
 export async function getStaticProps() {
-  const { caption, display_url, shortcode } = await getLatestPostURL(
-    "the.charlie.dood"
-  );
+  const { caption, display_url, shortcode } = await getLatestPostURL();
 
   return {
     props: {
