@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "check-latest": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node src/lib/check-latest",
     "start": "next start",
     "export": "next export",
     "format": "prettier --write .",
