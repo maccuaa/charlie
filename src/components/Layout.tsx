@@ -7,34 +7,16 @@ import siteMetadata from "../lib/metadata.json";
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div id="root">
     <style global jsx>{`
-      @import url("https://fonts.googleapis.com/css?family=Quicksand:300,&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 
       body {
-        font-family: "Quicksand", sans-serif;
-        font-weight: 300;
+        font-family: "Open Sans", sans-serif;
         background-color: #9a382a;
         color: #fff;
         height: 100vh;
         margin: 0;
         padding: 0;
         width: 100%;
-      }
-
-      #root {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        justify-content: center;
-      }
-
-      #wrapper {
-        ovrflow: auto;
-      }
-
-      main {
-        margin: 24px;
       }
 
       a {

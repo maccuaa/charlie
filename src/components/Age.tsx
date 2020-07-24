@@ -55,7 +55,7 @@ const Age = () => {
   const charliesBirthday = isCharliesBirthday();
 
   return (
-    <>
+    <div id="wrapper">
       {charliesBirthday && (
         <>
           <h1>It's Charlie's birthday! </h1>
@@ -64,7 +64,17 @@ const Age = () => {
       )}
       <h2>{`Charlie is ${humanAge} old`}</h2>
       <h2>{`That's ${dogAge} in dog years!`}</h2>
-    </>
+
+      <style jsx>{`
+        #wrapper {
+          margin: 0 16px;
+          text-align: center;
+        }
+        h2 {
+          font-weight: 300;
+        }
+      `}</style>
+    </div>
   );
 };
 
