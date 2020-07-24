@@ -11,10 +11,5 @@ jobs:
       - uses: actions/setup-node@v1.1.0
       - run: npm ci
       - run: npm run check-latest
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    if: failure()
-    steps:
-      - uses: actions/checkout@v2
       - run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
+        if: failure()
