@@ -1,6 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
+import "normalize.css";
+
+import Nav from "./Nav";
 
 import siteMetadata from "../lib/metadata.json";
 
@@ -11,7 +14,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
 
       body {
         font-family: "Open Sans", sans-serif;
-        background-color: #9a382a;
+        background-color: ${siteMetadata.primary};
         color: #fff;
         height: 100vh;
         margin: 0;
@@ -38,7 +41,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     <Head>
       <link rel="icon" href={siteMetadata.icon} />
       <link rel="manifest" href="/manifest.json" />
-      <meta name="theme-color" content="#9A382A" />
+      <meta name="theme-color" content={siteMetadata.primary} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </Head>
 
@@ -60,6 +63,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
     />
 
     <div id="wrapper">
+      <Nav />
       <main>{children}</main>
     </div>
   </div>

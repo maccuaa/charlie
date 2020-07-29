@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import "normalize.css";
-
 import Age from "../components/Age";
 import Layout from "../components/Layout";
 import LatestPost from "../components/LatestPost";
