@@ -16,7 +16,7 @@
     "date-fns": "2.16.1",
     "next": "9.5.3",
     "next-offline": "5.0.2",
-    "next-seo": "4.7.3",
+    "next-seo": "4.9.0",
     "normalize.css": "8.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
