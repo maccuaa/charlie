@@ -27,42 +27,42 @@ const items: AffiliateLink[] = [
     productURL:
       "https://www.amazon.ca/gp/product/B07L79525K/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=B07L79525K&linkCode=as2&tag=thecharlied00-20&linkId=3594621264ee293cbb6b4ddac1ab3678",
     imageURL:
-      "http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B07L79525K&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
+      "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B07L79525K&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
     productName: "Chuckit Zipflight Flying Ring",
   },
   {
     productURL:
       "https://www.amazon.ca/gp/product/B083FX7J3P/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=B083FX7J3P&linkCode=as2&tag=thecharlied00-20&linkId=61cc14b99565663f56b4cf3e61b25228",
     imageURL:
-      "http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B083FX7J3P&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
+      "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B083FX7J3P&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
     productName: "Zacro Foldable Small Dog Pool",
   },
   {
     productURL:
       "https://www.amazon.ca/gp/product/B00B4UR0G2/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=B00B4UR0G2&linkCode=as2&tag=thecharlied00-20&linkId=c2b98454d2cd2274e01ef5400b74c320",
     imageURL:
-      "http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B00B4UR0G2&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
+      "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B00B4UR0G2&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
     productName: "KONG Wild Knots Squeaker Bear",
   },
   {
     productURL:
       "https://www.amazon.ca/gp/product/B07MHDDMGL/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=B07MHDDMGL&linkCode=as2&tag=thecharlied00-20&linkId=17f0fba27b2080df2d5a08aaa99d46ad",
     imageURL:
-      "http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B07MHDDMGL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
+      "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B07MHDDMGL&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
     productName: "goDog Checkers Fat Rooster",
   },
   {
     productURL:
       "https://www.amazon.ca/gp/product/B01CVPEI8G/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=B01CVPEI8G&linkCode=as2&tag=thecharlied00-20&linkId=57179762393c69023fd8f875f6a1ce2c",
     imageURL:
-      "http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B01CVPEI8G&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
+      "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B01CVPEI8G&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
     productName: "Wahl Canada Groom Pro Pet Clipper Kit",
   },
   {
     productURL:
       "https://www.amazon.ca/gp/product/B07WZX5YF3/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=B07WZX5YF3&linkCode=as2&tag=thecharlied00-20&linkId=4c93247773100c31df505bf9c1f48a1d",
     imageURL:
-      "http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B07WZX5YF3&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
+      "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=CA&ASIN=B07WZX5YF3&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=thecharlied00-20",
     productName: "LED Dog Collar",
   },
 ];
