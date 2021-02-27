@@ -106,16 +106,4 @@ const Toys = () => (
   </>
 );
 
-// export async function getStaticProps() {
-//   const { caption, display_url, shortcode } = await getLatestPostURL();
-
-//   return {
-//     props: {
-//       caption,
-//       display_url,
-//       shortcode,
-//     },
-//   };
-// }
-
 export default Toys;
