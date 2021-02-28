@@ -1,7 +1,7 @@
 name: Deploy
-on:
-  schedule:
-    - cron: '*/15 * * * *'
+on: push
+#   schedule:
+#     - cron: '*/15 * * * *'
 jobs:
   pre-deploy:
     name: Pre-Deploy
