@@ -1,0 +1,13 @@
+{
+  "transactionurl": "",
+  "color": "004C97",
+  "label": { "default": "" },
+  "logo": {
+    "default": {
+      "small": "https://maccuaa.us.trustedauth.com/api/mobile/logo/small.png",
+      "medium": "https://maccuaa.us.trustedauth.com/api/mobile/logo/medium.png",
+      "large": "https://maccuaa.us.trustedauth.com/api/mobile/logo/large.png",
+      "xlarge": "https://maccuaa.us.trustedauth.com/api/mobile/logo/xlarge.png"
+    }
+  }
+}
