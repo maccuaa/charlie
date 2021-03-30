@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
-import "normalize.css";
+// import "normalize.css";
 
 import Nav from "./Nav";
 
