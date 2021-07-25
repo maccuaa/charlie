@@ -1,11 +1,12 @@
-import React from "react";
-
 import {
   differenceInYears,
   differenceInMonths,
   subYears,
   subMonths,
 } from "date-fns";
+
+import './style.css'
+
 
 const CHARLIE_BIRTHDAY = new Date(2019, 4, 19);
 
@@ -34,7 +35,9 @@ const calculateDogAge = (from: Date, to: Date) => {
 
   const age = 16 * Math.log(years) + 31;
 
-  return age;
+  console.log(age);
+
+  return Math.round(age);
 };
 
 const isCharliesBirthday = () => {
@@ -46,36 +49,40 @@ const isCharliesBirthday = () => {
   return isSameDay && isSameMonth;
 };
 
-const Age = () => {
+const main = () => {
   const TODAY = new Date();
 
   const humanAge = calculateHumanAge(CHARLIE_BIRTHDAY, TODAY);
   const dogAge = calculateDogAge(CHARLIE_BIRTHDAY, TODAY);
 
-  const charliesBirthday = isCharliesBirthday();
+  const itsCharliesBirthday = isCharliesBirthday();
 
-  return (
-    <div id="wrapper">
-      {charliesBirthday && (
-        <>
-          <h1>It's Charlie's birthday! </h1>
-          <h1>🎉 🥳 🎁</h1>
-        </>
-      )}
-      <h2>{`Charlie is ${humanAge} old`}</h2>
-      <h2>{`That's ${dogAge} in dog years!`}</h2>
+  const dogAgeElement = document.getElementById("dog-age");
+  const humanAgeElement = document.getElementById("human-age");
 
-      <style jsx>{`
-        #wrapper {
-          margin: 0 16px;
-          text-align: center;
-        }
-        h2 {
-          font-weight: 300;
-        }
-      `}</style>
-    </div>
-  );
-};
+  if (!dogAgeElement) {
+    console.error("unable to find dog-age element");
+    return;
+  }
 
-export default Age;
+  if (!humanAgeElement) {
+    console.error("unable to find human-age element");
+    return;
+  }
+
+  humanAgeElement.textContent = `Charlie is ${humanAge} old`;
+  dogAgeElement.textContent = `That's ${dogAge} in dog years!`;
+
+  if (itsCharliesBirthday) {
+    const surpriseElement = document.getElementById("surprise");
+
+    if (!surpriseElement) {
+      console.log("unable to find surprise element");
+      return;
+    }
+
+    surpriseElement.classList.remove("hidden");
+  }
+}
+
+main();
