@@ -13,5 +13,4 @@ jobs:
       - run: node -v
       - run: npm -v
       - run: npm ci
-      - run: npm run test
       - run: npm run build
