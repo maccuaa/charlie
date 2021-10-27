@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "typescript": "^4.4.4",
-    "vite": "2.6.11"
+    "vite": "2.6.12"
   },
   "dependencies": {
     "date-fns": "2.25.0"
