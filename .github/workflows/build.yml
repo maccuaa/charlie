@@ -1,5 +1,5 @@
 name: Build
-on: [push]
+on: [push, pull_request]
 jobs:
   build:
     name: Build
@@ -7,8 +7,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-
-      - run: node -v
-      - run: npm -v
-      - run: npm ci
-      - run: npm run build
+      - run: bun i --frozen-lockfile
+      - run: bun run build

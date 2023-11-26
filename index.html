@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <link rel="icon" href="/paw-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="canonical" href="https://howoldischarlie.ca" />
 
-  <link rel="icon" href="/paw-icon.png" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="canonical" href="https://howoldischarlie.ca" />
+    <meta name="theme-color" content="#9a382a" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="description" content="How old is Charlie? 🐶" />
+    <meta property="og:url" content="https://howoldischarlie.ca" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Charlie" />
+    <meta property="og:description" content="How old is Charlie? 🐶" />
+    <meta property="og:image" content="/paw-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charlie</title>
+  </head>
 
-  <!-- Metadata -->
-  <meta name="theme-color" content="#9a382a" />
-  <meta name="robots" content="index,follow" />
-  <meta name="googlebot" content="index,follow" />
-  <meta name="description" content="How old is Charlie? 🐶" />
-  <meta property="og:url" content="https://howoldischarlie.ca" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Charlie" />
-  <meta property="og:description" content="How old is Charlie? 🐶" />
-  <meta property="og:image" content="/paw-icon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charlie</title>
-</head>
-
-<body>
-  <div id="app">
-    <p id="icon">
-      🐶
-    </p>
-    <div id="surprise" class="hidden">
-      <p>It's Charlie's birthday! </p>
-      <p>🎉 🥳 🎁</p>
+  <body>
+    <div id="app">
+      <p id="icon">🐶</p>
+      <div id="surprise" class="hidden">
+        <p>It's Charlie's birthday!</p>
+        <p>🎉 🥳 🎁</p>
+      </div>
+      <p id="human-age"></p>
+      <p id="dog-age"></p>
     </div>
-    <p id="human-age"></p>
-    <p id="dog-age"></p>
-  </div>
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

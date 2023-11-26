@@ -5,8 +5,7 @@ import {
   subMonths,
 } from "date-fns";
 
-import './style.css'
-
+import "./style.css";
 
 const CHARLIE_BIRTHDAY = new Date(2019, 4, 19);
 
@@ -83,6 +82,6 @@ const main = () => {
 
     surpriseElement.classList.remove("hidden");
   }
-}
+};
 
 main();
