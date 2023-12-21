@@ -11,6 +11,6 @@
     "vite": "5.0.10"
   },
   "dependencies": {
-    "date-fns": "3.0.0"
+    "date-fns": "3.0.5"
   }
 }
