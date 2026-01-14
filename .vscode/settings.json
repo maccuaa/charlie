@@ -1,24 +1,5 @@
 {
   //
-  // Eslint Settings
-  //
-  "eslint.run": "onSave",
-  "eslint.enable": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "json",
-    "markdown",
-    "typescript",
-    "typescriptreact"
-  ],
-  "eslint.workingDirectories": [
-    {
-      "directory": "./",
-      "changeProcessCWD": true
-    }
-  ],
-  //
   // Whitespace
   //
   "files.trimTrailingWhitespace": true,
